@@ -1,0 +1,5 @@
+console.log(10 === "10");  // false (Different types: Number and String)
+console.log(true === 1);    // false (Different types: Boolean and Number)
+console.log(null === undefined); // false (Different types: Null and Undefined)
+console.log(0 === false);   // false (Different types: Number and Boolean)
+console.log("hello" === "Hello") //false (case sensitive)
