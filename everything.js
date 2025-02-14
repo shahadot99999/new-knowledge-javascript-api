@@ -1,2 +1,5 @@
-for (let i = 0; i < 3; i++)
- { console. log("Hello, world!"); }
+console.log(10 == "10");   // true (String "10" is coerced to Number 10)
+console.log(true == 1);     // true (Boolean true is coerced to Number 1)
+console.log(null == undefined); // true (Special case: null and undefined are loosely equal)
+console.log(0 == false);    // true (Number 0 and Boolean false are loosely equal)
+console.log("hello" == "Hello") //false (case sensitive)
