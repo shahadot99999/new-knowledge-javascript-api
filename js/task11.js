@@ -70,3 +70,53 @@ arr6.forEach((element) => {
 });
 console.log(arr6);
 // Output: [{ value: 1, isEven: false }, { value: 2, isEven: true }, { value: 3, isEven: false }]
+
+
+//Hard question
+
+
+//1. Flatten a nested array
+//Question: Use forEach to flatten the nested array [[1, 2], [3, 4], [5, 6]] into a single array.
+
+const arr7 = [[1, 2], [3, 4], [5, 6]];
+const flattened = [];
+arr7.forEach((subArray) => {
+  subArray.forEach((element) => {
+    flattened.push(element);
+  });
+});
+console.log(flattened); // Output: [1, 2, 3, 4, 5, 6]
+
+
+//2. Group objects by a property
+//Question: Use forEach to group objects in the array
+// [{name: "Alice", age: 25}, {name: "Bob", age: 30}, {name: "Charlie", age: 25}] by the age property.
+
+const arr8 = [
+    { name: "Alice", age: 25 },
+    { name: "Bob", age: 30 },
+    { name: "Charlie", age: 25 },
+  ];
+  const grouped = {};
+  arr8.forEach((element) => {
+    if (!grouped[element.age]) {
+      grouped[element.age] = [];
+    }
+    grouped[element.age].push(element);
+  });
+  console.log(grouped);
+  // Output: { 25: [{ name: "Alice", age: 25 }, { name: "Charlie", age: 25 }], 30: [{ name: "Bob", age: 30 }] }
+
+
+  //3. Find the intersection of two arrays
+  //Question: Use forEach to find the intersection of two arrays [1, 2, 3, 4] and [3, 4, 5, 6].
+
+  const arr9 = [1, 2, 3, 4];
+const arr10 = [3, 4, 5, 6];
+const intersection = [];
+arr9.forEach((element) => {
+  if (arr10.includes(element)) {
+    intersection.push(element);
+  }
+});
+console.log(intersection); // Output: [3, 4]
