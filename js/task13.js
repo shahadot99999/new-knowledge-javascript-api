@@ -28,3 +28,11 @@ for (const url of urls) {
   const response = await fetch(url);
   console.log(await response.json());
 }
+
+const urls1= ["url1", "url2", "url3"];
+
+urls1.forEach(async (url) => {
+  const response = await fetch(url);
+  console.log(await response.json());
+});
+// This won't work as expected because `forEach` doesn't wait for promises.
